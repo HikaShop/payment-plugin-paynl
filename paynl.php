@@ -102,7 +102,7 @@ class plgHikashoppaymentPaynl extends hikashopPaymentPlugin
                 'initials' => substr($order->cart->billing_address->address_firstname, 0, 1),
                 'lastName' => $order->cart->billing_address->address_lastname,
                 'language' => substr($lang->getTag(),0,2),
-                'emailAddress' => $order->customer->user_email,
+                'emailAddress' => $this->user->user_email,
                 'invoiceAddress' => array(
                     'streetName' => $addressBT[0],
                     'streetNumber' => $addressBT[1],
